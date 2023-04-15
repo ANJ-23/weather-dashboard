@@ -14,7 +14,6 @@
     <title>Weather Forcasts</title>
 </head>
 
-<!-- USE BOOTSTRAP -->
 <body>
     <!-- top header bar -->
     <header>
@@ -25,47 +24,61 @@
     <main class="container my-3">
         <div class="row">
             <!-- search bar; stores previous cities -->
-            <nav id="search" class="col-12 col-md-3 col-lg-3">
+            <nav id="search-column" class="col-12 col-md-4 col-lg-3">
                 <h2>Search for a City:</h2>
-                <form id="search-form" class="form">
-                    <input id="search-input" class="form-input" type="text" placeholder="Enter city...">
-                    <button id="search-city" class="btn btn-primary mx-auto">Search</button>
-                </form>
+                <form id="search-form" class="form d-grid">
+                    <input id="search-input" class="form-input" type="text" name="q" placeholder="Enter city...">
+                    <button id="search-button" class="btn btn-primary my-2">Search</button>
 
-                <!-- previously searched cities go here -->
-                <button id="previous-city" class="btn btn-primary">city</button>
+                    <!-- previously searched cities go here -->
+                    <button id="previous-city" class="btn btn-primary my-2">previous city</button>
+                </form>
             </nav>
 
             
             <!-- container for today's weather & 5-day forcast -->
-            <section id="weather-info" class="col-12 col-md-9 col-lg-9">
+            <section id="weather-info" class="col-12 col-md-8 col-lg-9">
                 <article id="todays-weather">
-                    <h2>city name (icon here)</h2>
-                    <p>
-                        Temp: # F <br>
-                        Wind: #.## MPH <br>
-                        Humidity: ##%
-                    </p>
+                    <!-- PLACEHOLDER TEXT -->
+                    <!-- <h2 id="searched-city">city name (icon here)</h2>
+                    <p id="today-temp">Temp: # F</p>
+                    <p id="today-wind">Wind: #.## MPH</p>
+                    <p id="today-humidity">Humidity: ##%</p> -->
                 </article>
 
                 <br>
                 <h3>5-Day Forcast:</h3>
-                <figure id="five-day-forcast" class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Date (4/14/2022)</h5>
-                        <p>icon here</p>
-                        <p class="card-text">
-                            Temp: # F <br>
-                            Wind: #.## MPH <br>
-                            Humidity: ##%
-                        </p>
-                    </div>
-                </figure>
-            </section>
+                <div id="five-day-container" class="row row-cols-1 row-cols-md-5 g-4">
+                    <!-- PLACEHOLDER TEXT -->
+                    <!-- 
+                    <figure id="five-day-forcast" class="card">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </figure> 
+                    -->
+                    <!-- 
+                    <figure id="five-day-forcast" class="card col-lg-2">
+                        <div class="card-body">
+                            <h5 class="card-title">Date (4/14/2022)</h5>
+                            <p>(icon here)</p>
+                            <p>Temp: # F</p>
+                            <p>Wind: #.## MPH</p>
+                            <p>Humidity: ##%</p>
+                        </div>
+                    </figure>
+                    -->
+                </div>
+            </section>    
         </div>
     </main>
 
+    <script
+        src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+        integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+        crossorigin="anonymous">
+    </script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="./assets/script.js"></script>
+    <script src="./assets/sample.js"></script>
 </body>
 </html>

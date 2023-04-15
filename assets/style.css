@@ -19,17 +19,31 @@ span {
     font-weight: bold;
 }
 
-#search {
-    height: 300px;
+/* main {
+    display: flex;
+} */
+
+#search-column {
+    height: 500px;
+}
+
+#search-button {
+    background-color: rgb(40, 62, 110);
+    border: none;
+}
+
+#previous-city {
+    background-color: rgb(199, 199, 199);
+    color: black;
+    border: none;
 }
 
 #todays-weather {
     border: 1px solid black;
+    padding: 14px;
 }
 
 #five-day-forcast {
-    width: 200px;
-    border: 2px solid black;
     background-color: darkblue;
     color: white;
 }
