@@ -12,7 +12,7 @@ N/A
 
 ## Usage
 
-Open the website (<>) and type in the name of a city in the search bar. Then, press the "Search" button to obtain today's weather and a 5-day weather forcast of the city.
+Open the website (<https://anj-23.github.io/weather-dashboard/>) and type in the name of a city in the search bar. Then, press the "Search" button to obtain today's weather and a 5-day weather forcast of the city.
 
 Previous search entries appear as a button below the search bar - akin to a search history. Pressing a button in the search history gathers weather data from the city that it lists.
 
