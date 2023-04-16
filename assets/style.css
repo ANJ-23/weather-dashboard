@@ -19,10 +19,6 @@ span {
     font-weight: bold;
 }
 
-/* main {
-    display: flex;
-} */
-
 #search-column {
     height: 500px;
 }
@@ -46,4 +42,5 @@ span {
 #five-day-forcast {
     background-color: darkblue;
     color: white;
+    padding: 14px;
 }
