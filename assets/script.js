@@ -59,7 +59,7 @@ function getCoords(event) {
   var search = searchInput.val();
 
   // but FIRST, get coordinates for weather
-  var requestCoords = "http://api.openweathermap.org/geo/1.0/direct?q=" + search + "&limit=1&appid=" + localStorage.getItem('api');
+  var requestCoords = "https://api.openweathermap.org/geo/1.0/direct?q=" + search + "&limit=1&appid=" + localStorage.getItem('api');
 
   // obtains city coordinates for weather data
   fetch(requestCoords)
@@ -79,7 +79,7 @@ function getCoords(event) {
 function getTodaysWeather() {
   // event.preventDefault();
 
-  var requestUrl = "http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&units=imperial&appid=4d00507739121560c1639c937ad7635c";
+  var requestUrl = "https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&units=imperial&appid=4d00507739121560c1639c937ad7635c";
 
   fetch(requestUrl)
   .then(function (response) {
@@ -90,7 +90,7 @@ function getTodaysWeather() {
 
     // obtains info for icon
     var iconCode = data.weather[0].icon;
-    var iconUrl = "http://openweathermap.org/img/w/" + iconCode + ".png";
+    var iconUrl = "https://openweathermap.org/img/w/" + iconCode + ".png";
 
     // displays today's weather data for city
     cityName.text(data.name);
@@ -113,7 +113,7 @@ function getTodaysWeather() {
 
 // appends 5-day forcast data on lower half of page
 function getForcast() {
-  var requestForcast = "http://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&units=imperial&appid=4d00507739121560c1639c937ad7635c";
+  var requestForcast = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&units=imperial&appid=4d00507739121560c1639c937ad7635c";
   
   fetch(requestForcast)
   .then(function (response) {
@@ -135,7 +135,7 @@ function getForcast() {
 
       // obtains icon code & makes it displayable
       var iconCode = data.list[i].weather[0].icon;
-      var iconUrl = "http://openweathermap.org/img/w/" + iconCode + ".png";
+      var iconUrl = "https://openweathermap.org/img/w/" + iconCode + ".png";
 
       // sets attributes for each variable
       cardContainer.attr('class', 'card');
